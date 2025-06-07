@@ -151,8 +151,16 @@ function AddGroupMember(lastName, firstName) {
 * 
 */
 function RemoveGroupMember() {
+   let selectedIndex = membersLst.selectedIndex;
 
-	throw "ERROR! You must work in this function before to send to Staging Environment!";
+    if (selectedIndex !== -1) {
+        membersLst.remove(selectedIndex);
+    } else {
+        alert("Please select a member to delete.");
+    }
+
+    lastname.focus();
+	//throw "ERROR! You must work in this function before to send to Staging Environment!";
 
 }
 
